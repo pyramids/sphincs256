@@ -136,3 +136,9 @@ func BenchmarkVerify(b *testing.B) {
 		b.StartTimer()
 	}
 }
+
+func BenchmarkGenerateKey(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		GenerateKey(rand.Reader)
+	}
+}
